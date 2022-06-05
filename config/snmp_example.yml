@@ -1,0 +1,27 @@
+# ------------------------------------------------------- #
+#                 Monitoring-Config
+# ------------------------------------------------------- #
+general:
+  version: v1.0.0
+  debug_level: info
+  check_cycle_in_minutes: 10
+  snmp_password: Snmp_Password
+  discord_webhook: https://WebhookUrl/
+
+# ------------------------------------------------------- #
+#                        InfluxDB
+# ------------------------------------------------------- #
+# This has not been added yet but is on my to-do list.
+influx:
+  connection_string: Stwing
+  token: token
+  org: Group
+  bucket: Buget
+
+# ------------------------------------------------------- #
+#                        Hosts
+# ------------------------------------------------------- #
+clients:
+  111.111.111.111: XXATBU-420691
+  111.111.111.112: XXATBU-420692
+  111.111.111.113: XXATBU-420693

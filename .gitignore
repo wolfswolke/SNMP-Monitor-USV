@@ -1,0 +1,8 @@
+/config/snmp.yml
+__pychache
+/.idea
+/dist/
+/venv/
+/test/
+/debug/
+/test/
