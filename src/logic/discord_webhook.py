@@ -14,7 +14,7 @@ from time import sleep
 #                   definitions
 # ------------------------------------------------------- #
 MODULE_LOGGER_HEAD = "discord_webhook -> "
-APP_VERSION = "v1.0.0"
+APP_VERSION = "v1.0.4"
 
 
 # ------------------------------------------------------- #
