@@ -2,7 +2,7 @@
 #                 Monitoring-Config
 # ------------------------------------------------------- #
 general:
-  version: v1.0.0
+  version: v1.0.4
   debug_level: info
   check_cycle_in_minutes: 10
   snmp_password: Snmp_Password
@@ -22,6 +22,6 @@ influx:
 #                        Hosts
 # ------------------------------------------------------- #
 clients:
-  111.111.111.111: XXATBU-420691
-  111.111.111.112: XXATBU-420692
-  111.111.111.113: XXATBU-420693
+  111.222.333.444: {hostname: Host-name1, offline: false}
+  111.222.333.445: {hostname: Host-name2, offline: false}
+  111.222.333.456: {hostname: Host-name3, offline: false}
