@@ -8,14 +8,15 @@
 from gutils.config_handle import config
 from gutils.logging_handle import logger
 from logic.snmp_query import snmp_input_state
-from logic.discord_webhook import alert as discord_alert
+from logic.webhook_manager import discord_alert
+from logic.webhook_manager import gotify_alert
 
 from time import sleep
 
 # ------------------------------------------------------- #
 #                   definitions
 # ------------------------------------------------------- #
-APP_VERSION = "v1.0.4"
+APP_VERSION = "v1.0.5"
 MODULE_LOGGER_HEAD = "start_app -> "
 
 
@@ -54,6 +55,7 @@ if __name__ == "__main__":
         clients = config.get_element("clients")
         snmp_password = config.get_element("general", "snmp_password")
         timeout = config.get_element("general", "check_cycle_in_minutes")
+        use_gotify = bool(config.get_element("general", "use_gotify"))
 
         while True:
             for dict_key, dict_value in clients.items():
@@ -65,7 +67,10 @@ if __name__ == "__main__":
                 if snmp_result < 200:
                     if bool(dict_value["offline"]) is False:
                         logger.debug(MODULE_LOGGER_HEAD + "Sending Alert and marking Device as Offline.")
-                        discord_alert(hostname)
+                        if use_gotify is True:
+                            gotify_alert(hostname)
+                        else:
+                            discord_alert(hostname)
                         dict_value["offline"] = True
                     else:
                         logger.debug(MODULE_LOGGER_HEAD + "Device Still offline")
