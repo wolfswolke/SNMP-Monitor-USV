@@ -2,11 +2,16 @@
 #                 Monitoring-Config
 # ------------------------------------------------------- #
 general:
-  version: v1.0.4
+  version: v1.0.5
   debug_level: info
   check_cycle_in_minutes: 10
   snmp_password: Snmp_Password
   discord_webhook: https://WebhookUrl/
+  discord_username: YourBotsName
+  use_gotify: false
+  gotify_url: https://YourUrl
+  gotify_port: 443
+  gotify_token: YourApiKey
 
 # ------------------------------------------------------- #
 #                        InfluxDB
