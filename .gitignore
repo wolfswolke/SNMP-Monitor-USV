@@ -1,0 +1,9 @@
+/config/snmp.yml
+__pychache
+/.idea
+/dist/
+/venv/
+/test/
+/debug/
+/test/
+/src/logic/__pycache__
